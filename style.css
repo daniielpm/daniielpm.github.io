@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor del tablero */
+#game-board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Filas del tablero */
+.letter-row {
+    display: flex;
+    gap: 15px;
+}
+
+/* Celdas de las letras */
+.letter-box {
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.letter-box.filled-box {
+    border-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Colores para las letras */
+.letter-box[style*="green"] {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: white;
+    transform: scale(1.1);
+}
+
+.letter-box[style*="yellow"] {
+    background-color: #ffeb3b;
+    border-color: #ffeb3b;
+    color: #333;
+    transform: scale(1.1);
+}
+
+.letter-box[style*="grey"] {
+    background-color: #757575;
+    border-color: #757575;
+    color: white;
+}
+
+/* Botón de pista */
+#hint-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#hint-button:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#hint-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+#instructions {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: left;
+}
+
+#instructions h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#instructions p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+#instructions ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+#instructions ul li {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+#instructions ul li ul {
+    margin-top: 5px;
+}
+
+#instructions ul li ul li {
+    margin-bottom: 5px;
+}
+

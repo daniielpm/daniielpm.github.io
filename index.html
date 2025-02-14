@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Adivina la palabra!</h1>
+    <div id="game-board"></div>
+    <div id="keyboard-cont"></div>
+    <button id="hint-button">Obtener una Pista</button>
+    <div id="instructions">
+        <h2>¿Cómo se juega?</h2>
+        <p>
+            ¡Bienvenido al juego de adivinar la palabra! Aquí están las reglas:
+        </p>
+        <ul>
+            <li>Tienes <strong>6 intentos</strong> para adivinar una palabra de 5 letras.</li>
+            <li>Después de cada intento, las letras cambiarán de color para indicar qué tan cerca estás de la palabra correcta:
+                <ul>
+                    <li><span style="color: #4caf50;">Verde</span>: La letra está en la posición correcta.</li>
+                    <li><span style="color: #ffeb3b;">Amarillo</span>: La letra está en la palabra, pero en otra posición.</li>
+                    <li><span style="color: #757575;">Gris</span>: La letra no está en la palabra.</li>
+                </ul>
+            </li>
+            <li>Puedes usar el botón <strong>"Obtener una Pista"</strong> para revelar una letra de la palabra correcta.</li>
+        </ul>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
